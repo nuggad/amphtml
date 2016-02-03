@@ -29,6 +29,8 @@ import {adsense} from '../ads/adsense';
 import {adtech} from '../ads/adtech';
 import {plista} from '../ads/plista';
 import {doubleclick} from '../ads/doubleclick';
+import {nuggad} from '../ads/nuggad';
+import {taboola} from '../ads/taboola';
 import {facebook} from './facebook';
 import {manageWin} from './environment';
 import {nonSensitiveDataPostMessage, listenParent} from './messaging';
@@ -36,7 +38,6 @@ import {twitter} from './twitter';
 import {register, run} from '../src/3p';
 import {parseUrl} from '../src/url';
 import {assert} from '../src/asserts';
-import {taboola} from '../ads/taboola';
 
 /**
  * Whether the embed type may be used with amp-embed tag.
@@ -53,6 +54,7 @@ register('adtech', adtech);
 register('plista', plista);
 register('doubleclick', doubleclick);
 register('taboola', taboola);
+register('nuggad', nuggad);
 register('_ping_', function(win, data) {
   win.document.getElementById('c').textContent = data.ping;
 });
